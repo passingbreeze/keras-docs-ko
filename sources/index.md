@@ -16,7 +16,7 @@ Keras는 Python으로 작성된 고수준의 신경망 API로, [TensorFlow](http
 
 [Keras.io](https://keras.io)에 있는 문서를 읽으십시오.
 
-Keras는 __Python 2.7-3.6__에서 원활하게 작동합니다.
+Keras는 __Python 2.7-3.6__ 에서 원활하게 작동합니다.
 
 ------------------
 
