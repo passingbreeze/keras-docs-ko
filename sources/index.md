@@ -6,7 +6,7 @@
 
 ## You have just found Keras.
 
-Keras is a high-level neural networks API, written in Python and capable of running on top of [TensorFlow](https://github.com/tensorflow/tensorflow), [CNTK](https://github.com/Microsoft/cntk), or [Theano](https://github.com/Theano/Theano). It was developed with a focus on enabling fast experimentation. *Being able to go from idea to result with the least possible delay is key to doing good research.*
+Keras는 Python으로 작성된, 고수준의 신경망 API로, [TensorFlow](https://github.com/tensorflow/tensorflow)나 [CNTK](https://github.com/Microsoft/cntk) 혹은 [Theano](https://github.com/Theano/Theano)와 같은 기계학습 라이브러리를 기반으로 하여 동작합니다. Keras는 실험을 빠르게 진행할 수 있도록 만드는데에 중점을 두고 개발되었습니다. *좋은 연구의 관건은 어떤 생각으로부터 결과를 도출하기 까지의 지연을 최소화하는 것에 있습니다.*
 
 Use Keras if you need a deep learning library that:
 
