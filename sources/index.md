@@ -8,19 +8,17 @@
 
 Keras는 Python으로 작성된 고수준의 신경망 API로, [TensorFlow](https://github.com/tensorflow/tensorflow)나 [CNTK](https://github.com/Microsoft/cntk) 혹은 [Theano](https://github.com/Theano/Theano)와 같은 기계학습 라이브러리를 기반으로 하여 동작합니다. Keras는 실험을 빠르게 진행할 수 있도록 만드는데에 중점을 두고 개발되었습니다. *좋은 연구의 관건은 어떤 생각으로부터 결과를 도출하기 까지의 지연을 최소화하는 것에 있습니다.*
 
-Use Keras if you need a deep learning library that:
+다음의 상황에서 deep learning 라이브러리가 필요하다면 Keras를 활용하십시오.
 
-- Allows for easy and fast prototyping (through user friendliness, modularity, and extensibility).
-- Supports both convolutional networks and recurrent networks, as well as combinations of the two.
-- Runs seamlessly on CPU and GPU.
+ - 빠르게 간단한 프로토타입을 만들어야할 때 (사용하기 쉽고 모듈식이며 확장성이 좋은 Keras의 특징을 통해)
+ - 합성곱 신경망과 순환 신경망을 합쳐야할 뿐만 아니라 두 신경망 모두를 지원해야할때
+ - CPU와 GPU 환경에서 매끄럽게 동작해야할 때
 
-Read the documentation at [Keras.io](https://keras.io).
+[Keras.io](https://keras.io)에 있는 문서를 읽으십시오.
 
-Keras is compatible with: __Python 2.7-3.6__.
-
+Keras는 __Python 2.7-3.6__에서 원활하게 작동합니다.
 
 ------------------
-
 
 ## Guiding principles
 
