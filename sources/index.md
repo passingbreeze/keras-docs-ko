@@ -10,8 +10,8 @@ Keras는 Python으로 작성된 고수준의 신경망 API로, [TensorFlow](http
 
 다음의 상황에서 deep learning 라이브러리가 필요하다면 Keras를 활용하십시오.
 
- - 빠르게 간단한 프로토타입을 만들어야할 때 (사용하기 쉽고 모듈식이며 확장성이 좋은 Keras의 특징을 통해)
- - 합성곱 신경망과 순환 신경망을 합쳐야할 뿐만 아니라 두 신경망 모두를 지원해야할때
+ - 간단한 프로토타입을 빠르게 만들어야할 때 (사용하기 쉽고 모듈식이며 확장성이 좋은 Keras의 특징을 통해)
+ - 합성곱(Convolutional) 신경망과 순환(Recurrent) 신경망을 합쳐야할 뿐만 아니라 두 신경망 모두를 지원해야할때
  - CPU와 GPU 환경에서 매끄럽게 동작해야할 때
 
 [Keras.io](https://keras.io)에 있는 문서를 읽으십시오.
@@ -20,15 +20,15 @@ Keras는 __Python 2.7-3.6__ 에서 원활하게 작동합니다.
 
 ------------------
 
-## Guiding principles
+## Keras를 사용하면서 반드시 지켜야하는 사항들.
 
-- __User friendliness.__ Keras is an API designed for human beings, not machines. It puts user experience front and center. Keras follows best practices for reducing cognitive load: it offers consistent & simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear and actionable feedback upon user error.
+- __사용자에게 친숙하도록.__ Keras is an API designed for human beings, not machines. It puts user experience front and center. Keras follows best practices for reducing cognitive load: it offers consistent & simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear and actionable feedback upon user error.
 
-- __Modularity.__ A model is understood as a sequence or a graph of standalone, fully-configurable modules that can be plugged together with as few restrictions as possible. In particular, neural layers, cost functions, optimizers, initialization schemes, activation functions, regularization schemes are all standalone modules that you can combine to create new models.
+- __모듈성(Modularity)을 띄도록.__ A model is understood as a sequence or a graph of standalone, fully-configurable modules that can be plugged together with as few restrictions as possible. In particular, neural layers, cost functions, optimizers, initialization schemes, activation functions, regularization schemes are all standalone modules that you can combine to create new models.
 
-- __Easy extensibility.__ New modules are simple to add (as new classes and functions), and existing modules provide ample examples. To be able to easily create new modules allows for total expressiveness, making Keras suitable for advanced research.
+- __쉽게 넓혀나갈 수 있도록.__ New modules are simple to add (as new classes and functions), and existing modules provide ample examples. To be able to easily create new modules allows for total expressiveness, making Keras suitable for advanced research.
 
-- __Work with Python__. No separate models configuration files in a declarative format. Models are described in Python code, which is compact, easier to debug, and allows for ease of extensibility.
+- __Python으로 짜도록.__ No separate models configuration files in a declarative format. Models are described in Python code, which is compact, easier to debug, and allows for ease of extensibility.
 
 
 ------------------
