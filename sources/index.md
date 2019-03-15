@@ -20,25 +20,26 @@ Keras는 __Python 2.7-3.6__ 에서 원활하게 작동합니다.
 
 ------------------
 
-## Keras를 사용하면서 반드시 지켜야하는 사항들.
+## 아래는 Keras를 사용하면서 반드시 지켜야하는 사항들입니다.
 
-- __사용자에게 친숙하도록.__ Keras is an API designed for human beings, not machines. It puts user experience front and center. Keras follows best practices for reducing cognitive load: it offers consistent & simple APIs, it minimizes the number of user actions required for common use cases, and it provides clear and actionable feedback upon user error.
+- __사용자에게 친숙하도록.__ Keras는 지속적이면서도 단순한 API를 제공하고, 일반적인 경우에 요구되는 사용자의 작업횟수를 최소하하며, 사용자에 의해 발생하는 오류는 명확하고 정확한 피드백을 제공합니다. 이러한 특징들은 사용자들이 Keras를 사용함에 있어서 눈에 띄는 부하를 줄여주는데 최선의 방법을 제공할 것입니다.
 
-- __모듈성(Modularity)을 띄도록.__ A model is understood as a sequence or a graph of standalone, fully-configurable modules that can be plugged together with as few restrictions as possible. In particular, neural layers, cost functions, optimizers, initialization schemes, activation functions, regularization schemes are all standalone modules that you can combine to create new models.
+- __모듈성(Modularity)을 띄도록.__ 모델은 가능한한 제한을 많이 하지 않는 조건 하에서 서로 연결될 수 있는, 완전히 조정된 모듈의 나열이나
+그래프(정점(Vertex)들의 집합(V)과 서로 다른 정점들을 연결하는 간선(Edge)들의 집합으로 구성된 구조)로 알려져있습니다. 실제로 신경망 층들, 지도학습에서 예측된 결과 값과 실제 결과 값의 차이를 표현해주는 비용 함수들, 신경망 층들을 학습시키는 옵티마이저들, 신경망을 초기화하는 방식들, 활성 함수들, 정규화는 새로운 모델들을 만들때 같이 결합해서 사용할 수 있는 독립적인 모듈들입니다.
 
-- __쉽게 넓혀나갈 수 있도록.__ New modules are simple to add (as new classes and functions), and existing modules provide ample examples. To be able to easily create new modules allows for total expressiveness, making Keras suitable for advanced research.
+- __쉽게 넓혀나갈 수 있도록.__ 새로운 모듈들은 간단하게 추가할 수 있고(새로운 클래스와 함수로써) 기존에 있던 모듈들은 충분한 예시를 제공해주고 있습니다. 새로운 모듈들을 쉽게 추가할 수 있도록 한 점은 어떤 분야에서건 구현하고 싶은 모듈들을 만들 수 있도록 허용해준다는 것이고 이것은 좀더 심화된 연구에서 Keras를 사용하기에 더욱 적합하도록 만들어줍니다.
 
-- __Python으로 짜도록.__ No separate models configuration files in a declarative format. Models are described in Python code, which is compact, easier to debug, and allows for ease of extensibility.
+- __Python으로 짜도록.__ 설정 파일들에는 선언적 형식으로된 별도의 모델들이 없습니다. 모델들은 간결하면서도 수정하기 쉽고 확장하기도 쉬운 Python 코드로 적혀져야 합니다.
 
 
 ------------------
 
 
-## Getting started: 30 seconds to Keras
+## 시작해봅시다 : Keras로 30초만에 신경망 모델 만들어보기.
 
-The core data structure of Keras is a __model__, a way to organize layers. The simplest type of model is the [`Sequential`](https://keras.io/getting-started/sequential-model-guide) model, a linear stack of layers. For more complex architectures, you should use the [Keras functional API](https://keras.io/getting-started/functional-api-guide), which allows to build arbitrary graphs of layers.
+Keras의 가장 핵심이 되는 자료구조는 층을 구성하는 방식 중에 하나인 __model__입니다. 가장 단순한 형태의 모델은 일직선 방향으로 층들이 쌓아 올려진 [`Sequential`](https://keras.io/getting-started/sequential-model-guide) 모델입니다. 좀더 복잡한 형태의 모델을 구성하기 위해서는 임의의 그래프 구조를 층에 만들 수 있도록 하는 [Keras 함수형 API](https://keras.io/getting-started/functional-api-guide)를 반드시 사용해야합니다.
 
-Here is the `Sequential` model:
+여기 `Sequential` 모델이 있습니다.
 
 ```python
 from keras.models import Sequential
@@ -46,7 +47,7 @@ from keras.models import Sequential
 model = Sequential()
 ```
 
-Stacking layers is as easy as `.add()`:
+`.add()` 를 사용해서 층을 쉽게 쌓을 수 있습니다.:
 
 ```python
 from keras.layers import Dense
@@ -55,7 +56,7 @@ model.add(Dense(units=64, activation='relu', input_dim=100))
 model.add(Dense(units=10, activation='softmax'))
 ```
 
-Once your model looks good, configure its learning process with `.compile()`:
+여러분들의 모델이 잘 만들어진 것 같다면, `.compile()`을 사용해 학습 과정을 조정해봅시다.:
 
 ```python
 model.compile(loss='categorical_crossentropy',
@@ -64,6 +65,7 @@ model.compile(loss='categorical_crossentropy',
 ```
 
 If you need to, you can further configure your optimizer. A core principle of Keras is to make things reasonably simple, while allowing the user to be fully in control when they need to (the ultimate control being the easy extensibility of the source code).
+
 ```python
 model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True))
